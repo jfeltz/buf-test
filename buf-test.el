@@ -163,7 +163,7 @@
      (funcall
      (if (not parent) 'identity 'cdr)
      (delete (f-filename abspath) (f-split (f-relative abspath root ))))))
-     (if path-list (f-join path-list) nil)))
+     (if path-list (apply 'f-join path-list) nil)))
 
 (defun iso:to-abs (root parent sub-path filename)
   (f-join root (if parent parent "") (if sub-path sub-path "") filename))
