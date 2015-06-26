@@ -3,11 +3,13 @@ buf-test
 buf-test facilitates:
 
   * switching between subject and test source files, irregardless of programming language
-  * running of a unit-test associated with current open test file buffer, or associated subject 
-  * generation of unit-test source from subject file, or vice versa 
-  * an architecture based on isomorphisms, thus, is extremely extensible 
+  * running of a unit-test associated with current open test file buffer, or open associated subject 
+  * generation of unit-test source from subject file, or vice versa
+  * an architecture based on isomorphisms, thus making it **extremely extensible**
 
-example configuration:
+Example Configuration for a Gradle Based Java Project
+=====================================================
+
 ```lisp
 (require 'buf-test)
 (require 's)
