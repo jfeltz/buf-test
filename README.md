@@ -7,8 +7,8 @@ buf-test facilitates:
   * generation of unit-test source from subject file, or vice versa
   * an architecture based on isomorphisms, thus making it **extremely extensible**
 
-Example Configuration for a Gradle Based Java Project
-=====================================================
+Example Setup for a Gradle Based Java Project
+=============================================
 
 ```lisp
 (require 'buf-test)
