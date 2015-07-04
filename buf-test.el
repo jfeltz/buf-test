@@ -45,8 +45,16 @@
   :group 'buf-test
   )
 
-(defcustom buf-test:test-writer  nil "the test writer" :group 'buf-test)
-(defcustom buf-test:source-writer nil "the source writer" :group 'buf-test)
+(defcustom buf-test:test-writer  nil
+  "the test writer, a function producing a strifng and of the form:
+   f test-path source-path "
+  :group
+  'buf-test)
+
+(defcustom buf-test:source-writer nil
+  "the source writer, a function producing a string and of the form
+   f source-path test-path"
+  :group 'buf-test)
 
 ;; an enumerated type
 (defvar test-t)
@@ -57,7 +65,7 @@
 (defvar get-alt)
 
 ;; base isomorphism and common records for source and test
-(defconst base-iso 
+(defconst base-iso
   '((source-t .
     ((get-writer . buf-test:source-writer)
      (get-alt    . test-t)))
